@@ -1,13 +1,3 @@
-/* @media (max-width: 767px) {
-}
-
-@media (min-width: 768px) and (max-width: 991px) {}
-
-@media (min-width: 992px) { }
-
-    @media (min-width: 1200px) {}
-
-*/
 /* global */
 :root {
     /* supervisor: border color */
@@ -40,11 +30,12 @@ body {
 
 /* Start styling */
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -55,20 +46,47 @@ body {
     }
 
     .grid-box {
-        display: grid;
-        grid-template-columns: 400px;
-        grid-template-rows: repeat(4, auto);
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
     }
 
+    .grid-box .card {
+        margin-bottom: 30px;
+    }
+}
 
+@media (min-width: 992px) {
+    .grid-box {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: '. team .'
+            'svr team cal'
+            'svr km cal'
+            '. km .';
+        gap: 50px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid-box {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: '. team .'
+            'svr team cal'
+            'svr km cal'
+            '. km .';
+        gap: 50px;
+    }
 }
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 50px
+    margin: 50px;
 }
 
 
@@ -80,7 +98,7 @@ body {
 .container .text-box {
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 550px;
     margin-bottom: 70px;
     text-align: center;
 }
@@ -97,16 +115,6 @@ body {
     font-weight: 200;
 }
 
-.grid-box {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: '. team .'
-        'svr team cal'
-        'svr km cal'
-        '. km .';
-    gap: 50px;
-}
 
 .grid-box .card {
     background-color: white;

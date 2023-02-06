@@ -1,0 +1,165 @@
+/* @media (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) { }
+
+    @media (min-width: 1200px) {}
+
+*/
+/* global */
+:root {
+    /* supervisor: border color */
+    --cyan: hsl(180, 62%, 55%);
+    /* team builder: border color */
+    --red: hsl(0, 78%, 62%);
+    /* karma: border color */
+    --orange: hsl(34, 97%, 64%);
+    /* calculator: border color */
+    --blue: hsl(212, 86%, 64%);
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* global */
+
+/* Start styling */
+
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .container .text-box p {
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .grid-box {
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+    }
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px
+}
+
+
+.container p {
+    color: hsl(229, 6%, 66%);
+    line-height: 1.6;
+}
+
+.container .text-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.container .text-box p {
+    font-size: 18px;
+}
+
+.container .text-box h1 {
+    color: rgb(0, 0, 0, 70%);
+}
+
+.container .text-box h1 span {
+    font-weight: 200;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: '. team .'
+        'svr team cal'
+        'svr km cal'
+        '. km .';
+    gap: 50px;
+}
+
+.grid-box .card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.152);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 300px;
+}
+
+/* elements */
+
+.grid-box .supervisor {
+    border-top: 5px solid var(--cyan);
+    grid-area: svr;
+}
+
+.grid-box .team-builder {
+    border-top: 5px solid var(--red);
+    grid-area: team;
+}
+
+.grid-box .karma {
+    border-top: 5px solid var(--orange);
+    grid-area: km;
+}
+
+.grid-box .calculator {
+    border-top: 5px solid var(--blue);
+    grid-area: cal;
+}
+
+/* elements */
+
+.grid-box .card .text-card {
+    margin: 15px
+}
+
+.grid-box .card h2 {
+    color: rgb(0, 0, 0, 70%);
+    margin-bottom: 5px
+}
+
+.grid-box .card .container-img {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    margin-top: 15px;
+    align-items: flex-end;
+    height: 50%;
+}
+
+/* End styling */
